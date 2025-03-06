@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+2,"Anne Bouldoin",TX,4.45,Laminate,500.0,1.75,2.10,875.000,1050.000,85.6625000,2010.6625000
