@@ -1,2 +1,0 @@
-OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
-1,"John Reed",KY,6.00,Wood,300.0,5.15,4.75,1545.000,1425.000,178.20000,3148.20000

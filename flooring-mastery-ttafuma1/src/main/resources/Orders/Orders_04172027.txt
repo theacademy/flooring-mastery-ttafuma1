@@ -1,2 +1,0 @@
-OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
-3,"Adam Gaelic",WA,9.25,Carpet,1000.0,2.25,2.10,2250.000,2100.000,402.3750000,4752.3750000
