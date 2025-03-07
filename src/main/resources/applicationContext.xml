@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="io" class="com.wileyedge.flooringmastery.view.UserIOImpl" />
+
+    <bean id="orderdao" class="com.wileyedge.flooringmastery.dao.OrderDaoImpl" />
+
+    <bean id="productdao" class="com.wileyedge.flooringmastery.dao.ProductDaoImpl" />
+
+    <bean id="taxdao" class="com.wileyedge.flooringmastery.dao.TaxDaoImpl" />
+
+    <bean id="view" class="com.wileyedge.flooringmastery.view.FlooringView">
+        <constructor-arg ref="io" />
+    </bean>
+
+    <bean id="service" class="com.wileyedge.flooringmastery.service.OrderServiceImpl">
+        <constructor-arg ref="orderdao" />
+        <constructor-arg ref="productdao" />
+        <constructor-arg ref="taxdao" />
+    </bean>
+
+    <bean id="controller" class="com.wileyedge.flooringmastery.controller.FlooringController">
+        <constructor-arg ref="service" />
+        <constructor-arg ref="view" />
+    </bean>
+</beans>

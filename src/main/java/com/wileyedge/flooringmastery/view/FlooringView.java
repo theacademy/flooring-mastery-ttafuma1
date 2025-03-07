@@ -88,15 +88,12 @@ public class FlooringView {
         BigDecimal area = new BigDecimal("0");
         while (!validInput) {
             String a = io.readString("Enter area in sq ft (" + ar + "): ");
-            if(a.isEmpty()){
+            if(a.matches("[0-9]+") && Double.valueOf(a) >= 100) {
+                area = BigDecimal.valueOf(Double.valueOf(a));
+                validInput = true;
+            }
+            else if(a.isEmpty()){
                 return ar;
-            }
-            else if(!a.matches("[0-9]+")) {
-                io.print("The area must be a positive decimal that is at least 100.");
-            }
-            else if(Double.valueOf(a) > 100) {
-                    area = BigDecimal.valueOf(Double.valueOf(a));
-                    validInput = true;
             }
             else{
                 io.print("The area must be a positive decimal that is at least 100.");

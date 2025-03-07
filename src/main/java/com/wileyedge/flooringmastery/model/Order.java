@@ -130,6 +130,6 @@ public class Order {
     public String toString() {
         return "Order: " + orderNumber + ", Date: " + orderDate + ", Customer: " + customerName +
                 ", State: " + state + ", Product: " + productType + ", Area: " + area +
-                ", Total: " + totalCost;
+                ", Total: $" + totalCost;
     }
 }

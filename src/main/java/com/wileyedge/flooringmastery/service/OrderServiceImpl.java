@@ -7,6 +7,7 @@ import com.wileyedge.flooringmastery.model.Order;
 import com.wileyedge.flooringmastery.model.Product;
 import com.wileyedge.flooringmastery.model.Tax;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -76,7 +77,8 @@ public class OrderServiceImpl implements OrderService{
     }
 
     private BigDecimal calculateTotal(Order order) {
-        return order.getMaterialCost().add(order.getLaborCost()).add(order.getTax());
+        return order.getMaterialCost().add(order.getLaborCost()).add(order.getTax()).setScale(2,
+                RoundingMode.FLOOR);
     }
 
     private void validateOrder(Order order) throws DataValidationException {
